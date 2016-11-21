@@ -1,0 +1,15 @@
+PODS:
+  - OAuthSwift (1.1.0)
+  - SwiftyJSON (3.1.3)
+
+DEPENDENCIES:
+  - OAuthSwift
+  - SwiftyJSON
+
+SPEC CHECKSUMS:
+  OAuthSwift: 7ec2c62274f6bdc30b1ba3b799c39a6fdcaea0e5
+  SwiftyJSON: 38a8ea2006779c0fc4c310cb2ee8195327740faf
+
+PODFILE CHECKSUM: 435e6ba1ba65c5cb20b588667bea78928883ed39
+
+COCOAPODS: 1.1.1
