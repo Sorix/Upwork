@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import OAuthSwift
 
 open class Upwork {
 	internal let rootURL = URL(string: "https://www.upwork.com/")!
