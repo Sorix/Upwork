@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		5163E304E7EB42D4653D74EC /* Pods_Upwork_OSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A6F2A7D59B3FCB2C1346E88 /* Pods_Upwork_OSX.framework */; };
 		B8D0BC4F3E71C35E6A9C76C0 /* Pods_Upwork_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BF43D01C01C155D3EFFF84A /* Pods_Upwork_iOS.framework */; };
+		D9301CA61DECDFB90091F903 /* UpworkDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9301CA51DECDFB90091F903 /* UpworkDelegate.swift */; };
+		D9301CA81DECE2540091F903 /* UpworkRequestor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9301CA71DECE2540091F903 /* UpworkRequestor.swift */; };
 		E224E9401D0085B10076CD8D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E224E93F1D0085B10076CD8D /* MobileCoreServices.framework */; };
 		E25B13151CFEEDBA0052049A /* Upwork.h in Headers */ = {isa = PBXBuildFile; fileRef = E25B13141CFEEDBA0052049A /* Upwork.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E25B13281CFEEF4B0052049A /* Upwork.h in Headers */ = {isa = PBXBuildFile; fileRef = E25B13141CFEEDBA0052049A /* Upwork.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E25B13411CFEF2240052049A /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B132F1CFEF2240052049A /* Auth.swift */; };
-		E25B13421CFEF2240052049A /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B132F1CFEF2240052049A /* Auth.swift */; };
 		E25B13431CFEF2240052049A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B13301CFEF2240052049A /* Extensions.swift */; };
 		E25B13441CFEF2240052049A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B13301CFEF2240052049A /* Extensions.swift */; };
 		E25B13451CFEF2240052049A /* getJobProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B13311CFEF2240052049A /* getJobProfile.swift */; };
@@ -26,26 +26,24 @@
 		E25B134E1CFEF2240052049A /* searchJobs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B13351CFEF2240052049A /* searchJobs.swift */; };
 		E25B134F1CFEF2240052049A /* Upwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B13361CFEF2240052049A /* Upwork.swift */; };
 		E25B13501CFEF2240052049A /* Upwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B13361CFEF2240052049A /* Upwork.swift */; };
-		E25B13511CFEF2240052049A /* UWJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B13371CFEF2240052049A /* UWJob.swift */; };
-		E25B13521CFEF2240052049A /* UWJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B13371CFEF2240052049A /* UWJob.swift */; };
-		E25B13531CFEF2240052049A /* UWJob+Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B13381CFEF2240052049A /* UWJob+Client.swift */; };
-		E25B13541CFEF2240052049A /* UWJob+Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B13381CFEF2240052049A /* UWJob+Client.swift */; };
-		E25B13551CFEF2240052049A /* UWJobProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B13391CFEF2240052049A /* UWJobProfile.swift */; };
-		E25B13561CFEF2240052049A /* UWJobProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B13391CFEF2240052049A /* UWJobProfile.swift */; };
-		E25B13571CFEF2240052049A /* UWJobProfile+Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B133A1CFEF2240052049A /* UWJobProfile+Assignment.swift */; };
-		E25B13581CFEF2240052049A /* UWJobProfile+Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B133A1CFEF2240052049A /* UWJobProfile+Assignment.swift */; };
-		E25B13591CFEF2240052049A /* UWJobProfile+Buyer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B133B1CFEF2240052049A /* UWJobProfile+Buyer.swift */; };
-		E25B135A1CFEF2240052049A /* UWJobProfile+Buyer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B133B1CFEF2240052049A /* UWJobProfile+Buyer.swift */; };
-		E25B135B1CFEF2240052049A /* UWMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B133C1CFEF2240052049A /* UWMetadata.swift */; };
-		E25B135C1CFEF2240052049A /* UWMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B133C1CFEF2240052049A /* UWMetadata.swift */; };
-		E25B135D1CFEF2240052049A /* UWRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B133D1CFEF2240052049A /* UWRequest.swift */; };
-		E25B135E1CFEF2240052049A /* UWRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B133D1CFEF2240052049A /* UWRequest.swift */; };
-		E25B135F1CFEF2240052049A /* UWRequestJobs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B133E1CFEF2240052049A /* UWRequestJobs.swift */; };
-		E25B13601CFEF2240052049A /* UWRequestJobs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B133E1CFEF2240052049A /* UWRequestJobs.swift */; };
-		E25B13611CFEF2240052049A /* UWResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B133F1CFEF2240052049A /* UWResult.swift */; };
-		E25B13621CFEF2240052049A /* UWResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B133F1CFEF2240052049A /* UWResult.swift */; };
-		E25B13631CFEF2240052049A /* UWSearchQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B13401CFEF2240052049A /* UWSearchQuery.swift */; };
-		E25B13641CFEF2240052049A /* UWSearchQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B13401CFEF2240052049A /* UWSearchQuery.swift */; };
+		E25B13511CFEF2240052049A /* UpworkJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B13371CFEF2240052049A /* UpworkJob.swift */; };
+		E25B13521CFEF2240052049A /* UpworkJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B13371CFEF2240052049A /* UpworkJob.swift */; };
+		E25B13531CFEF2240052049A /* UpworkJobClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B13381CFEF2240052049A /* UpworkJobClient.swift */; };
+		E25B13541CFEF2240052049A /* UpworkJobClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B13381CFEF2240052049A /* UpworkJobClient.swift */; };
+		E25B13551CFEF2240052049A /* UpworkJobProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B13391CFEF2240052049A /* UpworkJobProfile.swift */; };
+		E25B13561CFEF2240052049A /* UpworkJobProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B13391CFEF2240052049A /* UpworkJobProfile.swift */; };
+		E25B13571CFEF2240052049A /* UpworkAssignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B133A1CFEF2240052049A /* UpworkAssignment.swift */; };
+		E25B13581CFEF2240052049A /* UpworkAssignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B133A1CFEF2240052049A /* UpworkAssignment.swift */; };
+		E25B13591CFEF2240052049A /* UpworkBuyer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B133B1CFEF2240052049A /* UpworkBuyer.swift */; };
+		E25B135A1CFEF2240052049A /* UpworkBuyer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B133B1CFEF2240052049A /* UpworkBuyer.swift */; };
+		E25B135B1CFEF2240052049A /* UpworkMetadataAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B133C1CFEF2240052049A /* UpworkMetadataAPI.swift */; };
+		E25B135C1CFEF2240052049A /* UpworkMetadataAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B133C1CFEF2240052049A /* UpworkMetadataAPI.swift */; };
+		E25B135F1CFEF2240052049A /* UpworkJobsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B133E1CFEF2240052049A /* UpworkJobsAPI.swift */; };
+		E25B13601CFEF2240052049A /* UpworkJobsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B133E1CFEF2240052049A /* UpworkJobsAPI.swift */; };
+		E25B13611CFEF2240052049A /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B133F1CFEF2240052049A /* Result.swift */; };
+		E25B13621CFEF2240052049A /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B133F1CFEF2240052049A /* Result.swift */; };
+		E25B13631CFEF2240052049A /* UpworkSearchQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B13401CFEF2240052049A /* UpworkSearchQuery.swift */; };
+		E25B13641CFEF2240052049A /* UpworkSearchQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B13401CFEF2240052049A /* UpworkSearchQuery.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,29 +53,29 @@
 		9A6F2A7D59B3FCB2C1346E88 /* Pods_Upwork_OSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Upwork_OSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B162F4A02920E2395757EB1A /* Pods-Upwork-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Upwork-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Upwork-iOS/Pods-Upwork-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		C08830870F9C30448E7344FB /* Pods-Upwork-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Upwork-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Upwork-iOS/Pods-Upwork-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		D9301CA51DECDFB90091F903 /* UpworkDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpworkDelegate.swift; sourceTree = "<group>"; };
+		D9301CA71DECE2540091F903 /* UpworkRequestor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpworkRequestor.swift; sourceTree = "<group>"; };
 		E224E93F1D0085B10076CD8D /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
 		E25B13111CFEEDBA0052049A /* Upwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Upwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E25B13141CFEEDBA0052049A /* Upwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Upwork.h; sourceTree = "<group>"; };
 		E25B131F1CFEEDD80052049A /* Upwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Upwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E25B132B1CFEF0B70052049A /* Upwork.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Upwork.podspec; sourceTree = "<group>"; };
-		E25B132F1CFEF2240052049A /* Auth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		E25B13301CFEF2240052049A /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		E25B13311CFEF2240052049A /* getJobProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = getJobProfile.swift; sourceTree = "<group>"; };
 		E25B13321CFEF2240052049A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E25B13331CFEF2240052049A /* listCategories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = listCategories.swift; sourceTree = "<group>"; };
-		E25B13341CFEF2240052049A /* listSkills.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = listSkills.swift; sourceTree = "<group>"; };
+		E25B13331CFEF2240052049A /* listCategories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = listCategories.swift; path = ../Jobs/listCategories.swift; sourceTree = "<group>"; };
+		E25B13341CFEF2240052049A /* listSkills.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = listSkills.swift; path = ../Jobs/listSkills.swift; sourceTree = "<group>"; };
 		E25B13351CFEF2240052049A /* searchJobs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = searchJobs.swift; sourceTree = "<group>"; };
 		E25B13361CFEF2240052049A /* Upwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Upwork.swift; sourceTree = "<group>"; };
-		E25B13371CFEF2240052049A /* UWJob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UWJob.swift; sourceTree = "<group>"; };
-		E25B13381CFEF2240052049A /* UWJob+Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UWJob+Client.swift"; sourceTree = "<group>"; };
-		E25B13391CFEF2240052049A /* UWJobProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UWJobProfile.swift; sourceTree = "<group>"; };
-		E25B133A1CFEF2240052049A /* UWJobProfile+Assignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UWJobProfile+Assignment.swift"; sourceTree = "<group>"; };
-		E25B133B1CFEF2240052049A /* UWJobProfile+Buyer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UWJobProfile+Buyer.swift"; sourceTree = "<group>"; };
-		E25B133C1CFEF2240052049A /* UWMetadata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UWMetadata.swift; sourceTree = "<group>"; };
-		E25B133D1CFEF2240052049A /* UWRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UWRequest.swift; sourceTree = "<group>"; };
-		E25B133E1CFEF2240052049A /* UWRequestJobs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UWRequestJobs.swift; sourceTree = "<group>"; };
-		E25B133F1CFEF2240052049A /* UWResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UWResult.swift; sourceTree = "<group>"; };
-		E25B13401CFEF2240052049A /* UWSearchQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UWSearchQuery.swift; sourceTree = "<group>"; };
+		E25B13371CFEF2240052049A /* UpworkJob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpworkJob.swift; sourceTree = "<group>"; };
+		E25B13381CFEF2240052049A /* UpworkJobClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpworkJobClient.swift; sourceTree = "<group>"; };
+		E25B13391CFEF2240052049A /* UpworkJobProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpworkJobProfile.swift; sourceTree = "<group>"; };
+		E25B133A1CFEF2240052049A /* UpworkAssignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpworkAssignment.swift; sourceTree = "<group>"; };
+		E25B133B1CFEF2240052049A /* UpworkBuyer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpworkBuyer.swift; sourceTree = "<group>"; };
+		E25B133C1CFEF2240052049A /* UpworkMetadataAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpworkMetadataAPI.swift; sourceTree = "<group>"; };
+		E25B133E1CFEF2240052049A /* UpworkJobsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpworkJobsAPI.swift; sourceTree = "<group>"; };
+		E25B133F1CFEF2240052049A /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Model/Result.swift; sourceTree = "<group>"; };
+		E25B13401CFEF2240052049A /* UpworkSearchQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpworkSearchQuery.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +120,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D9301CA91DECE68C0091F903 /* Job */ = {
+			isa = PBXGroup;
+			children = (
+				E25B13381CFEF2240052049A /* UpworkJobClient.swift */,
+				E25B13371CFEF2240052049A /* UpworkJob.swift */,
+			);
+			name = Job;
+			sourceTree = "<group>";
+		};
+		D9301CAA1DECE6930091F903 /* Job Profile */ = {
+			isa = PBXGroup;
+			children = (
+				E25B133A1CFEF2240052049A /* UpworkAssignment.swift */,
+				E25B133B1CFEF2240052049A /* UpworkBuyer.swift */,
+				E25B13391CFEF2240052049A /* UpworkJobProfile.swift */,
+			);
+			name = "Job Profile";
+			sourceTree = "<group>";
+		};
 		E25B13051CFEED3D0052049A = {
 			isa = PBXGroup;
 			children = (
@@ -145,15 +162,16 @@
 		E25B13271CFEEEEA0052049A /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				E2CA62381CFEF4C300BED2EC /* Auth */,
 				E2CA62391CFEF4EE00BED2EC /* Jobs */,
 				E2CA623A1CFEF51500BED2EC /* Metadata */,
 				E2CA62371CFEF4A000BED2EC /* Model */,
 				E25B13301CFEF2240052049A /* Extensions.swift */,
 				E25B13321CFEF2240052049A /* Info.plist */,
-				E25B133D1CFEF2240052049A /* UWRequest.swift */,
 				E25B13141CFEEDBA0052049A /* Upwork.h */,
 				E25B13361CFEF2240052049A /* Upwork.swift */,
+				D9301CA71DECE2540091F903 /* UpworkRequestor.swift */,
+				D9301CA51DECDFB90091F903 /* UpworkDelegate.swift */,
+				E25B133F1CFEF2240052049A /* Result.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -161,46 +179,30 @@
 		E2CA62371CFEF4A000BED2EC /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E25B13381CFEF2240052049A /* UWJob+Client.swift */,
-				E25B13371CFEF2240052049A /* UWJob.swift */,
-				E25B133A1CFEF2240052049A /* UWJobProfile+Assignment.swift */,
-				E25B133B1CFEF2240052049A /* UWJobProfile+Buyer.swift */,
-				E25B13391CFEF2240052049A /* UWJobProfile.swift */,
-				E25B133F1CFEF2240052049A /* UWResult.swift */,
-				E25B13401CFEF2240052049A /* UWSearchQuery.swift */,
+				E25B13401CFEF2240052049A /* UpworkSearchQuery.swift */,
+				D9301CA91DECE68C0091F903 /* Job */,
+				D9301CAA1DECE6930091F903 /* Job Profile */,
 			);
-			name = Model;
 			path = Model;
-			sourceTree = "<group>";
-		};
-		E2CA62381CFEF4C300BED2EC /* Auth */ = {
-			isa = PBXGroup;
-			children = (
-				E25B132F1CFEF2240052049A /* Auth.swift */,
-			);
-			name = Auth;
-			path = Auth;
 			sourceTree = "<group>";
 		};
 		E2CA62391CFEF4EE00BED2EC /* Jobs */ = {
 			isa = PBXGroup;
 			children = (
-				E25B133E1CFEF2240052049A /* UWRequestJobs.swift */,
+				E25B133E1CFEF2240052049A /* UpworkJobsAPI.swift */,
 				E25B13311CFEF2240052049A /* getJobProfile.swift */,
-				E25B13331CFEF2240052049A /* listCategories.swift */,
-				E25B13341CFEF2240052049A /* listSkills.swift */,
 				E25B13351CFEF2240052049A /* searchJobs.swift */,
 			);
-			name = Jobs;
 			path = Jobs;
 			sourceTree = "<group>";
 		};
 		E2CA623A1CFEF51500BED2EC /* Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				E25B133C1CFEF2240052049A /* UWMetadata.swift */,
+				E25B133C1CFEF2240052049A /* UpworkMetadataAPI.swift */,
+				E25B13331CFEF2240052049A /* listCategories.swift */,
+				E25B13341CFEF2240052049A /* listSkills.swift */,
 			);
-			name = Metadata;
 			path = Metadata;
 			sourceTree = "<group>";
 		};
@@ -387,23 +389,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E25B13571CFEF2240052049A /* UWJobProfile+Assignment.swift in Sources */,
-				E25B135F1CFEF2240052049A /* UWRequestJobs.swift in Sources */,
-				E25B13591CFEF2240052049A /* UWJobProfile+Buyer.swift in Sources */,
+				E25B13571CFEF2240052049A /* UpworkAssignment.swift in Sources */,
+				E25B135F1CFEF2240052049A /* UpworkJobsAPI.swift in Sources */,
+				E25B13591CFEF2240052049A /* UpworkBuyer.swift in Sources */,
 				E25B134F1CFEF2240052049A /* Upwork.swift in Sources */,
-				E25B13611CFEF2240052049A /* UWResult.swift in Sources */,
+				E25B13611CFEF2240052049A /* Result.swift in Sources */,
 				E25B13451CFEF2240052049A /* getJobProfile.swift in Sources */,
-				E25B13531CFEF2240052049A /* UWJob+Client.swift in Sources */,
-				E25B135D1CFEF2240052049A /* UWRequest.swift in Sources */,
+				E25B13531CFEF2240052049A /* UpworkJobClient.swift in Sources */,
+				D9301CA61DECDFB90091F903 /* UpworkDelegate.swift in Sources */,
 				E25B134D1CFEF2240052049A /* searchJobs.swift in Sources */,
-				E25B135B1CFEF2240052049A /* UWMetadata.swift in Sources */,
+				E25B135B1CFEF2240052049A /* UpworkMetadataAPI.swift in Sources */,
 				E25B13491CFEF2240052049A /* listCategories.swift in Sources */,
 				E25B134B1CFEF2240052049A /* listSkills.swift in Sources */,
-				E25B13511CFEF2240052049A /* UWJob.swift in Sources */,
-				E25B13551CFEF2240052049A /* UWJobProfile.swift in Sources */,
-				E25B13411CFEF2240052049A /* Auth.swift in Sources */,
+				E25B13511CFEF2240052049A /* UpworkJob.swift in Sources */,
+				E25B13551CFEF2240052049A /* UpworkJobProfile.swift in Sources */,
+				D9301CA81DECE2540091F903 /* UpworkRequestor.swift in Sources */,
 				E25B13431CFEF2240052049A /* Extensions.swift in Sources */,
-				E25B13631CFEF2240052049A /* UWSearchQuery.swift in Sources */,
+				E25B13631CFEF2240052049A /* UpworkSearchQuery.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,23 +413,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E25B13581CFEF2240052049A /* UWJobProfile+Assignment.swift in Sources */,
-				E25B13601CFEF2240052049A /* UWRequestJobs.swift in Sources */,
-				E25B135A1CFEF2240052049A /* UWJobProfile+Buyer.swift in Sources */,
+				E25B13581CFEF2240052049A /* UpworkAssignment.swift in Sources */,
+				E25B13601CFEF2240052049A /* UpworkJobsAPI.swift in Sources */,
+				E25B135A1CFEF2240052049A /* UpworkBuyer.swift in Sources */,
 				E25B13501CFEF2240052049A /* Upwork.swift in Sources */,
-				E25B13621CFEF2240052049A /* UWResult.swift in Sources */,
+				E25B13621CFEF2240052049A /* Result.swift in Sources */,
 				E25B13461CFEF2240052049A /* getJobProfile.swift in Sources */,
-				E25B13541CFEF2240052049A /* UWJob+Client.swift in Sources */,
-				E25B135E1CFEF2240052049A /* UWRequest.swift in Sources */,
+				E25B13541CFEF2240052049A /* UpworkJobClient.swift in Sources */,
 				E25B134E1CFEF2240052049A /* searchJobs.swift in Sources */,
-				E25B135C1CFEF2240052049A /* UWMetadata.swift in Sources */,
+				E25B135C1CFEF2240052049A /* UpworkMetadataAPI.swift in Sources */,
 				E25B134A1CFEF2240052049A /* listCategories.swift in Sources */,
 				E25B134C1CFEF2240052049A /* listSkills.swift in Sources */,
-				E25B13521CFEF2240052049A /* UWJob.swift in Sources */,
-				E25B13561CFEF2240052049A /* UWJobProfile.swift in Sources */,
-				E25B13421CFEF2240052049A /* Auth.swift in Sources */,
+				E25B13521CFEF2240052049A /* UpworkJob.swift in Sources */,
+				E25B13561CFEF2240052049A /* UpworkJobProfile.swift in Sources */,
 				E25B13441CFEF2240052049A /* Extensions.swift in Sources */,
-				E25B13641CFEF2240052049A /* UWSearchQuery.swift in Sources */,
+				E25B13641CFEF2240052049A /* UpworkSearchQuery.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

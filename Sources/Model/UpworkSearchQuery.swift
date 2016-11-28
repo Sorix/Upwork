@@ -1,5 +1,5 @@
 //
-//  UWSearchQuerySave.swift
+//  UpworkSearchQuerySave.swift
 //  Upwork Monitor
 //
 //  Created by Vasily Ulianov on 15.10.15.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-open class UWSearchQuery: Equatable, Hashable, CustomStringConvertible {
+open class UpworkSearchQuery: Equatable, Hashable, CustomStringConvertible {
 	open var query = String()
 	open var skills = [String]() // conditionally required (one of this)
 	open var jobStatus = "open"
@@ -74,7 +74,7 @@ open class UWSearchQuery: Equatable, Hashable, CustomStringConvertible {
 
 // MARK: Equatable
 
-public func == (lhs: UWSearchQuery, rhs: UWSearchQuery) -> Bool {
+public func == (lhs: UpworkSearchQuery, rhs: UpworkSearchQuery) -> Bool {
 	if (lhs.query == rhs.query &&
 		lhs.skills == rhs.skills &&
 		lhs.category == rhs.category &&
@@ -85,7 +85,7 @@ public func == (lhs: UWSearchQuery, rhs: UWSearchQuery) -> Bool {
 	}
 }
 
-public func == (lhs: [UWSearchQuery], rhs: [UWSearchQuery]) -> Bool {
+public func == (lhs: [UpworkSearchQuery], rhs: [UpworkSearchQuery]) -> Bool {
 	guard lhs.count == rhs.count else { return false }
 	var i1 = lhs.makeIterator()
 	var i2 = rhs.makeIterator()

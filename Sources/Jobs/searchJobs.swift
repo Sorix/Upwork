@@ -9,9 +9,9 @@
 import Foundation
 import SwiftyJSON
 
-extension UWRequestJobs {
+extension UpworkJobsAPI {
 	/// Get jobs list for specified search query
-	public func searchJobs(_ searchQuery: UWSearchQuery) -> UWResult<[UWJob]> {
+	open func searchJobs(_ searchQuery: UpworkSearchQuery) -> Result<[UpworkJob]> {
 		if (searchQuery.isEmpty) {
 			return .error(.custom("Search query is empty"))
 		}
@@ -22,9 +22,9 @@ extension UWRequestJobs {
 			return .error(result.error)
 		}
 		
-		var jobs = [UWJob]()
+		var jobs = [UpworkJob]()
 		for (_, jsonJob) in json["jobs"] {
-			if let job = UWJob(json: jsonJob) {
+			if var job = UpworkJob(json: jsonJob) {
 				job.searchQueries = [searchQuery]
 				jobs.append(job)
 			}

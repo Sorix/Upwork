@@ -1,5 +1,5 @@
 //
-//  UWJobProfile.swift
+//  UpworkJobProfile.swift
 //  Upwork
 //
 //  Created by Vasily Ulianov on 03.04.16.
@@ -9,16 +9,18 @@
 import Foundation
 import SwiftyJSON
 
-public struct UWJobProfile {
+public struct UpworkJobProfile {
 	public let ciphertext: String
 	public let description: String
 	public let title: String
-	public let payTier: UWJobPayTier?
+	public let payTier: UpworkJobPayTier?
 	public let attached: URL?
 	
-	public let buyer: Buyer
+	public let buyer: UpworkBuyer
 	
-	public let assignments: [Assignment]
+	public let assignments: [UpworkAssignment]
+	
+	public let json: JSON
 	
 	public init?(json: JSON) {
 		guard let ciphertext = json["ciphertext"].string,
@@ -27,7 +29,7 @@ public struct UWJobProfile {
 		
 		self.ciphertext = ciphertext; self.description = description; self.title = title
 		
-		payTier = UWJobPayTier(rawValue: json["op_contractor_tier"].intValue)
+		payTier = UpworkJobPayTier(rawValue: json["op_contractor_tier"].intValue)
 		
 		if let attachText = json["op_attached_doc"].string , !attachText.isEmpty {
 			// Fix Upwork's bug when attach URL start with relative path
@@ -38,17 +40,19 @@ public struct UWJobProfile {
 			}
 		} else { attached = nil }
 		
-		buyer = Buyer(json: json["buyer"])
+		buyer = UpworkBuyer(json: json["buyer"])
 		
 		// Assignements
-		var assignements = [Assignment]()
+		var assignements = [UpworkAssignment]()
 		for (_, assignmentJSON) in json["assignments"]["assignment"] {
-			if let assingnement = Assignment(json: assignmentJSON) {
+			if let assingnement = UpworkAssignment(json: assignmentJSON) {
 				assignements.append(assingnement)
 			}
 		}
 		
 		self.assignments = assignements
+		
+		self.json = json
 	}
 	
 	/**
@@ -75,7 +79,7 @@ public struct UWJobProfile {
 	}
 }
 
-public enum UWJobPayTier: Int, CustomStringConvertible {
+public enum UpworkJobPayTier: Int, CustomStringConvertible {
 	case entry = 1
 	case intermediate = 2
 	case expert = 3

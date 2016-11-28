@@ -8,9 +8,9 @@
 
 import Foundation
 
-extension UWMetadata {
+extension UpworkMetadataAPI {
 	/// Returns a list of skills available in a freelancer's profile
-	public func listSkills() -> UWResult<[String]> {
+	open func listSkills() -> Result<[String]> {
 		let result = request.get("api/profiles/v1/metadata/skills.json", parameters: nil)
 		
 		guard let json = result.valid else { return .error(result.error) }

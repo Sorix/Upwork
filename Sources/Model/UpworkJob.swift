@@ -9,27 +9,27 @@
 import Foundation
 import SwiftyJSON
 
-open class UWJob: Equatable, Hashable {
-	open let id: String
-	open let category: String
-	open let url: URL
-	open let title: String
-	open let snippet: String
-	open let subcategory: String
-	open let workload: UWJobWorkload?
-	open let budget: Int?
-	open let dateCreated: Date
-	open let jobType: UWJobType
-	open let skills: [String]?
+public struct UpworkJob: Equatable, Hashable {
+	public let id: String
+	public let category: String
+	public let url: URL
+	public let title: String
+	public let snippet: String
+	public let subcategory: String
+	public let workload: UpworkJobWorkload?
+	public let budget: Int?
+	public let dateCreated: Date
+	public let jobType: UpworkJobType
+	public let skills: [String]?
 	
-	open let client: Client
-	open var profile: UWJobProfile?
+	public let client: UpworkJobClient
+	public var profile: UpworkJobProfile?
 	
-	open let json: JSON
+	public let json: JSON
 
-	open var isRead: Bool = false
+	public var isRead: Bool = false
 	
-	open var searchQueries = [UWSearchQuery]()
+	public var searchQueries = [UpworkSearchQuery]()
 
 	public init?(json: JSON) {
 		guard let id = json["id"].string,
@@ -37,7 +37,7 @@ open class UWJob: Equatable, Hashable {
 			let title = json["title"].string,
 			let snippet = json["snippet"].string,
 			let dateCreated = json["date_created"].string?.rfc3339DateStringToNSDate,
-			let jobType = UWJobType(rawValue: json["job_type"].stringValue) else { return nil }
+			let jobType = UpworkJobType(rawValue: json["job_type"].stringValue) else { return nil }
 		
 		self.id = id; self.url = url; self.title = title; self.snippet = snippet; self.dateCreated = dateCreated; self.jobType = jobType
 		
@@ -46,7 +46,7 @@ open class UWJob: Equatable, Hashable {
 		budget = json["budget"].int
 		category = json["category2"].stringValue
 		subcategory = json["subcategory2"].stringValue
-		workload = UWJobWorkload(rawValue: json["workload"].stringValue)
+		workload = UpworkJobWorkload(rawValue: json["workload"].stringValue)
 		
 		// Skills
 		if let skillsJSON = json["skills"].array {
@@ -57,32 +57,32 @@ open class UWJob: Equatable, Hashable {
 			self.skills = parsedSkills
 		} else { self.skills = nil }
 		
-		client = Client(json: json["client"])
+		client = UpworkJobClient(json: json["client"])
 	}
 	
-	open var hashValue: Int {
+	public var hashValue: Int {
 		return id.hashValue
 	}
 }
 
-public enum UWJobType: String {
+public enum UpworkJobType: String {
 	case Hourly = "Hourly"
 	case Fixed = "Fixed"
 }
 
 
-public enum UWJobWorkload: String {
+public enum UpworkJobWorkload: String {
 	case AsNeeded = "as_needed"
 	case Partial = "part_time"
 	case FullTime = "full_time"
 }
 
-public func == (lhs: UWJob, rhs: UWJob) -> Bool {
+public func == (lhs: UpworkJob, rhs: UpworkJob) -> Bool {
 	return (lhs.id == rhs.id)
 }
 
-extension Sequence where Iterator.Element == UWJob {
-	public func find(withID id: String) -> UWJob? {
+extension Sequence where Iterator.Element == UpworkJob {
+	public func find(withID id: String) -> UpworkJob? {
 		for element in self {
 			if element.id == id { return element }
 		}

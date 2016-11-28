@@ -1,5 +1,5 @@
 //
-//  UWResult
+//  Result
 //  UpworkFramework
 //
 //  Created by Vasily Ulianov on 01.04.16.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum UWError: Error, CustomStringConvertible {
+public enum UpworkError: Error, CustomStringConvertible {
 	/// Data parsing error, in general argument have function name where error was catched
     case parse(function: String)
 
@@ -17,29 +17,30 @@ public enum UWError: Error, CustomStringConvertible {
 	
 	/// Basic error with custom text
     case custom(String)
-	
-	case database(Error)
     
     public var description: String {
         switch self {
         case .parse: return "Unexpected response from Upwork servers"
         case .api(let status, let code, let message): return "API Error. Status: \(status), code: \(code), message: \(message)"
         case .custom(let message): return message
-		case .database(let error): return "\(error)"
         }
     }
+
+	public static func makeParseError(inFunction function: String = #function) -> UpworkError {
+		return UpworkError.parse(function: function)
+	}
 }
 
 /**
 	Resulting enum allowing you to carefully parse an error
 */
-public enum UWResult<T> {
+public enum Result<T> {
 	
 	/// request was successfull return data here
     case success(T)
 	
-	/// error wrapped in `UWError` enum
-    case error(UWError)
+	/// error wrapped in `UpworkError` enum
+    case error(UpworkError)
 	
 	/// Returns data if result is `.Success`
     public var valid: T? {
@@ -50,7 +51,7 @@ public enum UWResult<T> {
     }
 	
 	/// Used to get error, if result is `.Success` (not `.Error`) returns error with text *No error*
-    public var error: UWError {
+    public var error: UpworkError {
         switch self {
         case .error(let error): return error
         default: return .custom("No error")

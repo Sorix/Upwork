@@ -1,5 +1,5 @@
 //
-//  UWRequestJobs.swift
+//  UpworkJobsAPI
 //  Upwork
 //
 //  Created by Vasily Ulianov on 03.04.16.
@@ -8,10 +8,10 @@
 
 import Foundation
 
-open class UWRequestJobs {
-	internal let request: UWRequest
+public class UpworkJobsAPI {
+	internal let request: UpworkRequestor
 	
-	internal init(request: UWRequest) {
+	internal init(request: UpworkRequestor) {
 		self.request = request
 	}
 }
