@@ -14,6 +14,5 @@ Pod::Spec.new do |s|
   s.source_files = 'Sources/**/*'
   s.module_name = 'Upwork'
 
-  s.dependency 'OAuthSwift', '~> 1.1.0'
   s.dependency 'SwiftyJSON', '~> 3.1.0'
 end

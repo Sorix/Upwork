@@ -2,7 +2,6 @@
 use_frameworks!
 
 def my_pods
-	pod 'OAuthSwift'
 	pod 'SwiftyJSON'
 end
 
