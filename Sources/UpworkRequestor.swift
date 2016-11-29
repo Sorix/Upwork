@@ -23,7 +23,7 @@ internal class UpworkRequestor {
 			return .error(.custom("Can't generate URL for root url: \(rootURL), suffixApiURL: \(suffixApiURL)"))
 		}
 
-		let resultData = delegate.signAndSendRequest(toURL: url, parameters: parameters)
+		let resultData = delegate.upwork(signAndSendRequestTo: url, withParameters: parameters)
 		
 		switch resultData {
 		case .success(let data):

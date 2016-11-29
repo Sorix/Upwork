@@ -9,5 +9,5 @@
 import Foundation
 
 public protocol UpworkDelegate {
-	func signAndSendRequest(toURL url: URL, parameters: [String: AnyObject]?) -> Result<Data>
+	func upwork(signAndSendRequestTo url: URL, withParameters parameters: [String: AnyObject]?) -> Result<Data>
 }
