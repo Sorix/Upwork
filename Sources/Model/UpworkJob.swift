@@ -27,8 +27,6 @@ public struct UpworkJob: Equatable, Hashable {
 	
 	public let json: JSON
 
-	public var isRead: Bool = false
-	
 	public var searchQueries = [UpworkSearchQuery]()
 
 	public init?(json: JSON) {

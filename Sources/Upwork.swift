@@ -23,7 +23,5 @@ open class Upwork {
 		self.jobs = UpworkJobsAPI(request: upworkRequest)
 		self.metadata = UpworkMetadataAPI(request: upworkRequest)
     }
-	
 
-	
 }
